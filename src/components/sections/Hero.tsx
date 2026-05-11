@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 import { LazyHeroScene } from "@/components/three/LazyScene";
 import { useIsMobile } from "@/hooks/useIsMobile";
+import { withBase } from "@/lib/paths";
 
 const microcopy = ["Fonduri europene", "Contabilitate", "Fiscalitate", "Strategie financiară"];
 
@@ -40,9 +41,9 @@ export function Hero() {
           loop
           playsInline
           preload="metadata"
-          poster="/images/hero-poster.svg"
+          poster={withBase("/images/hero-poster.svg")}
         >
-          <source src="/videos/amt-hero.mp4" type="video/mp4" />
+          <source src={withBase("/videos/amt-hero.mp4")} type="video/mp4" />
         </video>
       )}
 

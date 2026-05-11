@@ -1,6 +1,7 @@
 "use client";
 
 import { company, navigation, services } from "@/lib/content";
+import { withBase } from "@/lib/paths";
 
 export function Footer() {
   const year = new Date().getFullYear();
@@ -96,7 +97,7 @@ export function Footer() {
             <ul className="mt-4 space-y-2 text-sm">
               <li>
                 <a
-                  href="/politica-confidentialitate"
+                  href={withBase("/politica-confidentialitate")}
                   className="text-white/70 transition hover:text-white"
                 >
                   Politica de confidențialitate
@@ -104,14 +105,17 @@ export function Footer() {
               </li>
               <li>
                 <a
-                  href="/termeni-conditii"
+                  href={withBase("/termeni-conditii")}
                   className="text-white/70 transition hover:text-white"
                 >
                   Termeni și condiții
                 </a>
               </li>
               <li>
-                <a href="/gdpr" className="text-white/70 transition hover:text-white">
+                <a
+                  href={withBase("/gdpr")}
+                  className="text-white/70 transition hover:text-white"
+                >
                   GDPR
                 </a>
               </li>
