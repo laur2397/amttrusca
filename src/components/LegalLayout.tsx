@@ -1,4 +1,5 @@
 import type { ReactNode } from "react";
+import { withBase } from "@/lib/paths";
 
 export function LegalLayout({
   eyebrow,
@@ -22,7 +23,7 @@ export function LegalLayout({
           </h1>
           <p className="mt-5 text-base text-white/60">{subtitle}</p>
           <a
-            href="/"
+            href={withBase("/")}
             className="mt-8 inline-flex items-center gap-2 text-[12px] uppercase tracking-[0.22em] text-accent-200 transition hover:text-white"
           >
             <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
